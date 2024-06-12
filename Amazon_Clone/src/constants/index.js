@@ -1,39 +1,29 @@
  export const allItems=[
   {
-     _id:"99",title:"All"
+     _id:"100",title:"All"
   },
     {
-        _id:"100", title:"men's clothing"
+        _id:"101", title:"men's clothing"
     },{
-        _id:"101", title:"jewelery"
+        _id:"102", title:"jewelery"
     },{
-        _id:"102", title:"electronics"
+        _id:"103", title:"electronics"
     },{
-        _id:"103", title:"women's clothing"
+        _id:"104", title:"women's clothing"
     },{
-        _id:"104", title:"beauty And personal care"
+        _id:"105", title:"beauty And personal care"
     }
     ,{
-        _id:"105", title:"books"
+        _id:"106", title:"books"
     }
     ,{
-        _id:"106", title:"Boys fashion"
+        _id:"107", title:"Boys fashion"
     },
     {
-        _id:"107", title:"Computers"
+        _id:"108", title:"Computers"
     }
     ,{
-        _id:"108", title:"Deals"
-    },{
-        _id:"109", title:"Digital Music"
-    },{
-        _id:"110", title:"Girls Fashion"
-    },
-    {
-        _id:"111", title:"Women's Fashion"
-    },
-    {
-        _id:"112", title:"Prime Video"
+        _id:"109", title:"Deals"
     }
 ]
 export const footerBottomItems = [
