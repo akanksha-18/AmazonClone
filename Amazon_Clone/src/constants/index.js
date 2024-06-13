@@ -10,21 +10,7 @@
         _id:"103", title:"electronics"
     },{
         _id:"104", title:"women's clothing"
-    },{
-        _id:"105", title:"beauty And personal care"
-    }
-    ,{
-        _id:"106", title:"books"
-    }
-    ,{
-        _id:"107", title:"Boys fashion"
     },
-    {
-        _id:"108", title:"Computers"
-    }
-    ,{
-        _id:"109", title:"Deals"
-    }
 ]
 export const footerBottomItems = [
     {

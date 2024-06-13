@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,24 +29,6 @@ const Products = () => {
     setIsModalOpen(false);
     setSelectedProduct(null);
   };
-
-  // const filteredProducts = productData.filter((item) => {
-  //   return (
-  //     (!selectedCategory || item.category.toLowerCase().includes(selectedCategory.toLowerCase())) &&
-  //     (!searchQuery || item.title.toLowerCase().includes(searchQuery.toLowerCase()))
-  //   );
-  // });
- 
-  // const filteredProducts = productData.filter((item) => {
-  //   if (selectedCategory === "All") {
-  //     return true; // Show all products when "All" is selected
-  //   } else {
-  //     return (
-  //       item.category.toLowerCase().includes(selectedCategory.toLowerCase()) &&
-  //       (!searchQuery || item.title.toLowerCase().includes(searchQuery.toLowerCase()))
-  //     );
-  //   }
-  // });
   
   const filteredProducts = productData.filter((item) => {
     const categoryMatch = selectedCategory === 'All' || item.category.toLowerCase().includes(selectedCategory.toLowerCase());
@@ -109,7 +90,9 @@ const Products = () => {
           </div>
         ))
       ) : (
-        <p className='col-span-full text-center text-xl text-gray-700'>No product available</p>
+        <div className='col-span-full flex justify-center items-center h-64'>
+          <p className='text-xl text-gray-700'>No product available</p>
+        </div>
       )}
       {isModalOpen && selectedProduct && (
         <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
