@@ -81,6 +81,8 @@ const initialState = {
   orders: [],
   loading: false,
   error: null,
+  userOrders:{},
+  userCart:{}
 };
 
 export const amazonSlice = createSlice({
@@ -145,6 +147,8 @@ export const amazonSlice = createSlice({
     clearCart: (state) => {
       state.products = [];
     },
+   
+   
   },
 });
 
