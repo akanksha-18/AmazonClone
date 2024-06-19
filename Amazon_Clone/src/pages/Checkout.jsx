@@ -79,7 +79,7 @@ const Checkout = () => {
 
   const handleLoginRedirect = () => {
     closeLoginRequiredModal();
-    navigate('/login');
+    navigate('/signin');
   };
 
   return (
