@@ -1,11 +1,10 @@
-// import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 // const initialState = {
 //   products: [],
 //   userInfo: null,
-// searchQuery: '',
-// selectedCategory: '',
-  
+//   searchQuery: '',
+//   selectedCategory: '',
 // };
 
 // export const amazonSlice = createSlice({
@@ -46,15 +45,15 @@
 //     userSignOut: (state) => {
 //       state.userInfo = null;
 //     },
-// setSearchQuery: (state, action) => {
-//   state.searchQuery = action.payload;
-// },
-// setSelectedCategory: (state, action) => {
-//   state.selectedCategory = action.payload;
-// },
-// setProducts: (state, action) => {
-//   state.products = action.payload;
-// },
+//     setSearchQuery: (state, action) => {
+//       state.searchQuery = action.payload;
+//     },
+//     setSelectedCategory: (state, action) => {
+//       state.selectedCategory = action.payload;
+//     },
+//     setProducts: (state, action) => {
+//       state.products = action.payload;
+//     },
 //   },
 // });
 
@@ -66,19 +65,22 @@
 //   increamentQuantity,
 //   setUserInfo,
 //   userSignOut,
-// setProducts,
-// setSearchQuery, setSelectedCategory
+//   setProducts,
+//   setSearchQuery,
+//   setSelectedCategory,
 // } = amazonSlice.actions;
-//  export default amazonSlice.reducer;
 
+// export default amazonSlice.reducer;
 
-import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   products: [],
   userInfo: null,
   searchQuery: '',
   selectedCategory: '',
+  orders: [],
+  loading: false,
+  error: null,
 };
 
 export const amazonSlice = createSlice({
@@ -128,6 +130,21 @@ export const amazonSlice = createSlice({
     setProducts: (state, action) => {
       state.products = action.payload;
     },
+    placeOrder: (state, action) => {
+      state.orders.push(action.payload);
+    },
+    setOrders: (state, action) => {
+      state.orders = action.payload;
+    },
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
+    setError: (state, action) => {
+      state.error = action.payload;
+    },
+    clearCart: (state) => {
+      state.products = [];
+    },
   },
 });
 
@@ -142,7 +159,9 @@ export const {
   setProducts,
   setSearchQuery,
   setSelectedCategory,
+  placeOrder,
+  setOrders,
+  setLoading, setError,clearCart
 } = amazonSlice.actions;
 
 export default amazonSlice.reducer;
-
