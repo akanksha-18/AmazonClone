@@ -2,16 +2,25 @@
   {
      _id:"100",title:"All"
   },
+    
     {
-        _id:"101", title:"men's clothing"
-    },{
-        _id:"102", title:"jewelery"
-    },{
-        _id:"103", title:"electronics"
-    },{
-        _id:"104", title:"women's clothing"
+      _id:"101",title:"Furniture"
     },
+    {
+      _id:"102",title:"Beauty"
+    },
+    {
+      _id:"103",title:"Groceries"
+    },
+    {
+      _id:"104",title:"Mens-shoes"
+    },
+    {
+      _id:"105",title:"kitchen-accesories"
+    }
 ]
+
+
 export const footerBottomItems = [
     {
       _id: 1,

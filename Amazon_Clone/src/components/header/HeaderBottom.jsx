@@ -106,3 +106,84 @@ const HeaderBottom = () => {
 };
 
 export default HeaderBottom;
+
+// import React, { useState } from "react";
+// import { motion } from "framer-motion";
+// import MenuIcon from "@mui/icons-material/Menu";
+// import CloseIcon from "@mui/icons-material/Close";
+// import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+// import SideNavContent from "./SideNav";
+// import Modal from "../../pages/Modal"; // Assuming you have a Modal component
+
+// const HeaderBottom = () => {
+//   const [activeModal, setActiveModal] = useState(null); // State to track active modal
+
+//   // Function to open modal
+//   const openModal = (modalType) => {
+//     setActiveModal(modalType);
+//   };
+
+//   // Function to close modal
+//   const closeModal = () => {
+//     setActiveModal(null);
+//   };
+
+//   return (
+//     <div className="w-full px-4 h-[36px] bg-amazon_light text-white flex items-center relative">
+//       {/* Menu Icon */}
+//       <MenuIcon className="cursor-pointer" onClick={() => openModal("Menu")} />
+      
+//       {/* List Items */}
+//       <ul className="flex items-center gap-2 text-sm tracking-wide ml-4">
+//         <li className="headerHover" onClick={() => openModal("All")}>
+//           All
+//         </li>
+//         <li className="hidden md:inline-flex headerHover" onClick={() => openModal("Today's Deals")}>
+//           Today's Deals
+//         </li>
+//         <li className="hidden md:inline-flex headerHover" onClick={() => openModal("Customer Service")}>
+//           Customer Service
+//         </li>
+//         <li className="hidden md:inline-flex headerHover" onClick={() => openModal("Gift Cards")}>
+//           Gift Cards
+//         </li>
+//         <li className="hidden md:inline-flex headerHover" onClick={() => openModal("Sell")}>
+//           Sell
+//         </li>
+//       </ul>
+      
+//       {/* Modals */}
+//       {activeModal && (
+//         <Modal closeModal={closeModal}>
+//           {/* Modal Content based on activeModal */}
+//           {activeModal === "Today's Deals" && (
+//             <div>
+//               <h2 className="text-2xl font-bold mb-4">Today's Deals</h2>
+//               <p>Content specific to Today's Deals...</p>
+//             </div>
+//           )}
+//           {activeModal === "Customer Service" && (
+//             <div>
+//               <h2 className="text-2xl font-bold mb-4">Customer Service</h2>
+//               <p>Content specific to Customer Service...</p>
+//             </div>
+//           )}
+//           {activeModal === "Gift Cards" && (
+//             <div>
+//               <h2 className="text-2xl font-bold mb-4">Gift Cards</h2>
+//               <p>Content specific to Gift Cards...</p>
+//             </div>
+//           )}
+//           {activeModal === "Sell" && (
+//             <div>
+//               <h2 className="text-2xl font-bold mb-4">Sell</h2>
+//               <p>Content specific to Sell...</p>
+//             </div>
+//           )}
+//         </Modal>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default HeaderBottom;

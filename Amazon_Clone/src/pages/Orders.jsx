@@ -22,6 +22,13 @@ const Orders = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {order.products && order.products.map((item, i) => ( // Check if order.products exists
                     <div key={i} className="border border-gray-300 p-4 rounded-lg">
+                      <div className="w-full md:w-1/5">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-44 object-contain"
+                  />
+                </div>
                       <h4 className="text-lg font-semibold">{item.title}</h4>
                       <p className="text-sm text-gray-600">{item.description}</p>
                       <p className="text-lg font-semibold">Unit Price: ${item.price}</p>

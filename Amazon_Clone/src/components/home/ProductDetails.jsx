@@ -1,4 +1,3 @@
-// ProductDetails.js
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -17,7 +16,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+        const response = await axios.get(`https://dummyjson.com/products/${id}`);
         setProduct(response.data);
         setLoading(false);
       } catch (error) {
@@ -36,7 +35,7 @@ const ProductDetails = () => {
       description: product.description,
       price: product.price,
       category: product.category,
-      image: product.image,
+      image: product.thumbnail, // Use thumbnail instead of image
       quantity: 1
     }));
     toast.success("Product added to cart!");
@@ -63,12 +62,16 @@ const ProductDetails = () => {
     <div className='max-w-4xl mx-auto py-8 px-4'>
       <div className='flex flex-wrap'>
         <div className='w-full md:w-1/2'>
-          <img src={product.image} alt={product.title} className='rounded-lg shadow-md' />
+          <img src={product.thumbnail} alt={product.title} className='rounded-lg shadow-md' />
         </div>
         <div className='w-full md:w-1/2 md:pl-6 mt-4 md:mt-0'>
           <h2 className='text-2xl font-bold mb-2'>{product.title}</h2>
           <p className='text-gray-700'>{product.description}</p>
           <p className='text-2xl font-semibold mt-4'>${product.price}</p>
+          <p className='text-sm text-gray-500'>Brand: {product.brand}</p>
+          <p className='text-sm text-gray-500'>Category: {product.category}</p>
+          <p className='text-sm text-gray-500'>Rating: {product.rating}</p>
+          <p className='text-sm text-gray-500'>Stock: {product.stock}</p>
           <div className='mt-4'>
             <button
               onClick={handleAddToCart}

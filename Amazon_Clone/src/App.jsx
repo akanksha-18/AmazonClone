@@ -21,6 +21,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Checkout from './pages/Checkout';
 import Orders from './pages/Orders';
+import Products from './pages/MyProducts';
+
 
 const Layout = () => {
   return (
@@ -39,6 +41,7 @@ function App(){
       <Route>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} loader={productsData}></Route>
+          <Route path='/products' element={<Products/>}/>
            <Route path="/cart" element={<Cart />}></Route> 
            <Route path="/product/:id" element={<ProductDetails />} />
            <Route path="/checkout" element={<Checkout />}></Route> 
