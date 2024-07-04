@@ -134,7 +134,10 @@ const Registration = () => {
     <div className="w-full">
       <div className="w-full bg-gray-100 pb-10">
         <form className="w-[350px] mx-auto flex flex-col items-center" onSubmit={handleRegistration}>
-          <img className="w-32 pt-3" src={darkLogo} alt="" />
+          {/* <img className="w-32 pt-3" src={darkLogo} alt="" /> */}
+          <Link to="/">
+        <img className="w-32 pt-3 cursor-pointer" src={darkLogo} alt="Logo" />
+      </Link>
           <div className="w-full border border-gray-300 p-6">
             <h2 className="font-titleFont text-3xl font-medium mb-4">Create Account</h2>
             <div className="flex flex-col gap-3">
